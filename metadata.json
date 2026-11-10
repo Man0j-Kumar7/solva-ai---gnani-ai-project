@@ -1,0 +1,10 @@
+{
+  "name": "Remix Remix Remix SOLVA — Multilingual, Multimodal AI Assistant",
+  "description": "An original, polished multilingual and multimodal AI assistant with voice interaction, vision understanding, and fluent Indic language support.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.011em;
+  }
+  code, pre, kbd {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  /* Prevent iOS automatic zoom on focus while keeping standard pinch-to-zoom intact */
+  input, textarea, select {
+    font-size: 16px;
+    touch-action: manipulation;
+  }
+  button {
+    touch-action: manipulation;
+  }
+}
+
+/* Rich Gradient & Ambient Glow Utilities */
+.solva-gradient-text {
+  background: linear-gradient(135deg, #a855f7 0%, #d946ef 45%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.solva-card-glow {
+  box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.15), 0 0 0 1px rgba(168, 85, 247, 0.1);
+}
+
+.solva-card-glow:hover {
+  box-shadow: 0 14px 40px -10px rgba(168, 85, 247, 0.25), 0 0 0 1px rgba(168, 85, 247, 0.2);
+}
+
+.solva-ambient-bg {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(168, 85, 247, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(217, 70, 239, 0.1) 0px, transparent 50%);
+}
+
+.dark .solva-ambient-bg {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(126, 34, 206, 0.25) 0px, transparent 55%),
+    radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.18) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(192, 38, 211, 0.18) 0px, transparent 60%);
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.5);
+}
